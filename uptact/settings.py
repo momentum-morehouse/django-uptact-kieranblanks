@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hatefulsophisticatedgraduate--five-nine.repl.co']
+ALLOWED_HOSTS = ['hatefulsophisticatedgraduate--kieranblanks.repl.co','hatefulsophisticatedgraduate.kieranblanks.repl.co' ]
 
 # Application definition
 
