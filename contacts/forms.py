@@ -30,7 +30,7 @@ class NoteForm(forms.Form):
 
 widgets = {
     'birthday':
-    forms.DateInput(
+        forms.DateInput(
         format=('%m/%d/%Y'),
         attrs={
             'class': 'form-control',

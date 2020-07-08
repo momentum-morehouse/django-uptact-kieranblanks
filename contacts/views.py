@@ -53,7 +53,7 @@ def contact_detail(request,pk):
   contact = get_object_or_404(Contact, pk=pk)
   return render(request,"contacts/contact_view.html",          {"contact": contact})
 
-def get_note(request):
+def get_note(request,pk):
     if request.method == 'Post':
         form = NoteForm(request.Post)
         if form.is_valid():

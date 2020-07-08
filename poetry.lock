@@ -209,6 +209,14 @@ python-versions = "*"
 version = "0.4.3"
 
 [[package]]
+category = "main"
+description = "A simple reusable app to add notes to various models"
+name = "notes"
+optional = false
+python-versions = "*"
+version = "0.3.0"
+
+[[package]]
 category = "dev"
 description = "Core utilities for Python packages"
 name = "packaging"
@@ -542,7 +550,7 @@ python-versions = "*"
 version = "0.29.0"
 
 [metadata]
-content-hash = "e1ff648ae6e4bef6e6ecb1e8182f176d45dc4db4b1259d0a8ffa9e79d6de50e5"
+content-hash = "62093e0836e72c6447c6b03baaac4624e593e2f9e7d2259d5f26e21d7a00a911"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -652,6 +660,9 @@ mypy = [
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
+]
+notes = [
+    {file = "notes-0.3.0.tar.gz", hash = "sha256:db47ce667520d797d5db72f00f7b11a67f16bc0c18794041ccee07d86792d266"},
 ]
 packaging = [
     {file = "packaging-20.4-py2.py3-none-any.whl", hash = "sha256:998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181"},

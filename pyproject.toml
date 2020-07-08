@@ -16,6 +16,7 @@ django-extensions = "^2.2.9"
 django-localflavor = "^3.0.1"
 python = "^3.8"
 werkzeug = "^1.0.1"
+notes = "^0.3.0"
 [tool.poetry.dev-dependencies]
 mypy = "^0.770"
 prospector = "^1.2.0"
