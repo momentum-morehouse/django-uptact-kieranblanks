@@ -1,6 +1,5 @@
 from django import forms
-from .models import Contact
-from .models import Note
+from .models import Contact, Note
 
 
 class ContactForm(forms.ModelForm):
@@ -18,8 +17,18 @@ class ContactForm(forms.ModelForm):
             'birthday',
         ]
 
+        widgets = {
+            'birthday':
+                forms.DateInput(
+                format=('%m/%d/%Y'),
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Select a date',
+                    'type': 'date'
+                }),
+        }
 
-class NoteForm(forms.Form):
+class NoteForm(forms.ModelForm):
     class Meta:
         model = Note
         fields =[
@@ -28,13 +37,4 @@ class NoteForm(forms.Form):
     # new_noteform = forms.Textarea(label='Note', max_length=250)
 
 
-widgets = {
-    'birthday':
-        forms.DateInput(
-        format=('%m/%d/%Y'),
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Select a date',
-            'type': 'date'
-        }),
-}
+   
