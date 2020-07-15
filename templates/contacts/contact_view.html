@@ -19,15 +19,15 @@
     </div>
 
 <div class="noteDetails">
-  <div class="w-33 pa3">
+  <ul> 
   
 
     {% for note in contact.notes.all %}
-    {{note.note}}
+    <li>{{note.note}}</li>
 
     {% endfor %}
 
-  </div>
+  </ul>
 
 </div>
 

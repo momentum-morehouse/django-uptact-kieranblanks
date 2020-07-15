@@ -53,11 +53,14 @@ def contact_detail(request,pk):
   contact = get_object_or_404(Contact, pk=pk)
   return render(request,"contacts/contact_view.html",          {"contact": contact})
 
-def get_note(request,pk):
-    if request.method == 'Post':
-        form = NoteForm(request.Post)
+def post_note(request,pk):
+    if request.method == 'POST':
+        form = NoteForm(request.POST)
         if form.is_valid():
-            return render, redirect, get_object_or_404('/Thank You/')
+            new_note = form.save(commit=False)
+            new_note.contact_id = pk 
+            new_note.save()
+            return redirect(to='contact_view',pk=pk)
     else:
         form = NoteForm()
-    return render(request,  'notes.html' , {'form': form})
+    return render(request,  'contacts/notes.html' , {'form': form})
